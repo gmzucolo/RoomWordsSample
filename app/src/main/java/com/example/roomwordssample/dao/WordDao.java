@@ -1,4 +1,4 @@
-package com.example.roomwordssample.DAO;
+package com.example.roomwordssample.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

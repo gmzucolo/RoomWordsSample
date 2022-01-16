@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.roomwordssample.DAO.WordDao;
+import com.example.roomwordssample.dao.WordDao;
 import com.example.roomwordssample.model.Word;
 
 @Database(entities = {Word.class}, version = 1, exportSchema = false)

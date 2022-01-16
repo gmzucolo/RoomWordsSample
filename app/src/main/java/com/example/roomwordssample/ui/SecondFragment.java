@@ -1,4 +1,4 @@
-package com.example.roomwordssample;
+package com.example.roomwordssample.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.roomwordssample.R;
 import com.example.roomwordssample.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
