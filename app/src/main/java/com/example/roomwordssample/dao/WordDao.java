@@ -3,6 +3,7 @@ package com.example.roomwordssample.dao;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.example.roomwordssample.model.Word;
@@ -12,7 +13,7 @@ import java.util.List;
 @Dao
 public interface WordDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Word word);
 
     @Query("DELETE from word_table")
