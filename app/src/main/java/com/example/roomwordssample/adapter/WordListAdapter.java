@@ -48,14 +48,14 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
     // mWords has not been updated (means initially, it's null, and we can't return null).
     @Override
     public int getItemCount() {
-        return 0;
+        if (mWords != null)
+            return mWords.size();
+        else return 0;
     }
 
 
-    class WordViewHolder extends RecyclerView.ViewHolder {
-
+    static class WordViewHolder extends RecyclerView.ViewHolder {
         private final TextView wordItemView;
-
         private WordViewHolder(View itemView) {
             super(itemView);
             wordItemView = itemView.findViewById(R.id.textView);

@@ -16,7 +16,6 @@ import com.example.roomwordssample.model.Word;
 public abstract class WordRoomDatabase extends RoomDatabase {
 
     public abstract WordDao wordDao();
-
     private static WordRoomDatabase INSTANCE;
 
     //Singleton
@@ -39,7 +38,7 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    private static RoomDatabase.Callback sRoomDatabaseCallback =
+    private static final RoomDatabase.Callback sRoomDatabaseCallback =
             new RoomDatabase.Callback() {
 
                 @Override

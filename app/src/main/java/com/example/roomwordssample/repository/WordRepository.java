@@ -13,8 +13,8 @@ import java.util.List;
 
 public class WordRepository {
 
-    private WordDao mWordDao;
-    private LiveData<List<Word>> mAllWords;
+    private final WordDao mWordDao;
+    private final LiveData<List<Word>> mAllWords;
 
     public WordRepository(Application application) {
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
@@ -32,7 +32,7 @@ public class WordRepository {
 
     private static class insertAsyncTask extends AsyncTask<Word, Void, Void> {
 
-        private WordDao mAsyncTaskDao;
+        private final WordDao mAsyncTaskDao;
 
         insertAsyncTask(WordDao dao) {
             mAsyncTaskDao = dao;
